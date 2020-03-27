@@ -9,19 +9,23 @@ public class LoginPageSteps {
 
 	@Given("^the user launch the chrome application$")
 	public void the_user_launch_the_chrome_application() throws Throwable {
+		    // Write code here that turns the phrase above into concrete actions
 		lp.url();
 	}
 	@When("^the user opens the opencart webpage$")
 	public void the_user_opens_the_opencart_webpage() throws Throwable {
+			    // Write code here that turns the phrase above into concrete actions
 		lp.Login();
 	}
 	@Then("^the user login using (.*) and (.*)$")
 	public void the_user_login_using_username_and_password(String username,String password) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
 		lp.LoginDetails(username,password);
 		
 	}
 	@Then("^click on the (.*) button user nagivate to the next page$")
 	public void click_on_the_login_button_user_nagivate_to_the_next_page(String source) throws Throwable {
+		 // Write code here that turns the phrase above into concrete actions
 		lp.submit(source);
 	}
 
