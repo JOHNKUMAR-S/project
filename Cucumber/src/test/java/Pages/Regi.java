@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.Baseclass.BaseClass;
 
 public class Regi extends BaseClass {
+	//Registration task Locators
 	By MyAccount= By.xpath("//a[@class='dropdown-toggle']");
 	By Register= By.linkText("Register");
 	By First= By.id("input-firstname");
@@ -31,17 +32,19 @@ public class Regi extends BaseClass {
 	By submit=By.xpath("//input[@type='submit']");
 
  
-
+	// To launch the Browser
 	public void web() throws InterruptedException, IOException
 	{
 		launchBrowser("chrome");
 		Thread.sleep(5000);
 	}
+	//To launch the Home Page
 	public void Reg()
 	{
 		wb.get("http://opencart.abstracta.us/");
 		System.out.println(wb.getTitle());
 	}
+	//To give Registration Details
 	public void RegDetails(String first,String last,String email,String telephone,String address,String city,String post,String country,String region,String password) throws InterruptedException
 	{
 		wb.findElement(MyAccount).click();
@@ -74,6 +77,7 @@ public class Regi extends BaseClass {
 		wb.findElement(yes).click();
 
 	}
+	//To take Screenshot and close the Browser
 	public void submit(String source) throws InterruptedException, IOException
 	{
 		WebElement l5=wb.findElement(submit);
