@@ -28,10 +28,17 @@ Then the user login using <username> and <password>
 Then click on the <login> button user nagivate to the next page
     
 Examples:
-|username|password|login|
-|jk97@gmail.com|johnkumar|login1|
-|mukundkumar90@gmail.com|mukundkumar97|login2|
-|shreyas20@gmail.com|shreyas13|login3|
+|username          |password |login  |
+|akila@gmail.com    |password |login1 |
+|jk99@gmail.com    |paswords |login2 |
+|maneesh@gmail.com     |passwopd |login3 |
+|john1997@gmail.com|opencart1|login4 |
+|kamil@gmail.com   |opencart2|login5 |
+|krish765@gmail.com  |openc@rt3|login6 |
+|akhn98@gmail.com   |openc@rt4|login7 |
+|surya1998@gmail.com  |opencart6|login8 |
+|iyer@gmail.com    |openca#t5|login9 |
+|palak@gmail.com    |opencart0|login10|
     
 @TC_03_Opencart 
 Scenario Outline: To Login with invalid details    
