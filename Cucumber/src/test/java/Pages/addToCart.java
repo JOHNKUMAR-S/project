@@ -10,7 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class addToCart {
-	WebDriver driver;
+	protected WebDriver wb;//To initiate driver
+	public void Opencart_addTocart_browser(WebDriver driver)
+	{
+		this.wb=driver;
+	}
+	//Add to cart task locators
 	By Myaccount=By.xpath("//*[@id=\"top-links\"]/ul/li[2]/a/span[1]");
 	By login=By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a");
 	By Email=By.id("input-email");
@@ -36,6 +41,7 @@ public class addToCart {
 		driver.get("http://opencart.abstracta.us/");
 		System.out.println(driver.getTitle());
 	}
+	//Add the product to the cart
 	public void actions() throws InterruptedException 
 	{
 		driver.findElement(Myaccount).click();
@@ -57,7 +63,7 @@ public class addToCart {
 		
 		}
 	
-	
+	//To finish and close the browser
 	public void addcart() throws InterruptedException {
 		driver.findElement(addtocart).click();
 		Thread.sleep(2000);
