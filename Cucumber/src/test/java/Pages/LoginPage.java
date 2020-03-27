@@ -11,17 +11,20 @@ import org.openqa.selenium.interactions.Actions;
 import com.Baseclass.BaseClass;
 
 public class LoginPage extends BaseClass{
+	//Login page Locators
 	By MyAccount= By.xpath("//a[@class='dropdown-toggle']");
 	By Login=By.xpath("//*[@id='top-links']/ul/li[2]/ul/li[2]/a");
 	By Email=By.name("email");
 	By Password=By.name("password");
 	By Submit=By.xpath("//*[@type='submit']");
-
+	
+	//To open the chrome browser
 	public void url() throws InterruptedException, IOException
 	{
 	  launchBrowser("chrome");
 		Thread.sleep(5000);
 	}
+	//To open the Open cart home page
 	public void Login()
 	{
 		website("http://opencart.abstracta.us/");
@@ -42,6 +45,7 @@ public class LoginPage extends BaseClass{
 	}
 	public void submit(String source) throws IOException, InterruptedException
 	{
+		//To close the browser and takes the screenshot
 		WebElement l5=wb.findElement(Submit);
 		Actions a=new Actions(wb);
 		a.moveToElement(l5).click().perform();
